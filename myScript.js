@@ -16,8 +16,11 @@ function setGridSize(){
 function createGrid(gridNumber) {
 
     let grid = document.getElementById('grid');
-    let cellSize = 500 / gridNumber; 
 
+    while (grid.firstChild) {
+        grid.removeChild(grid.firstChild);
+      }
+    let cellSize = 500 / gridNumber; 
     for (i = 0; i < gridNumber * gridNumber; i++) {
         let cell = document.createElement('div');
         cell.classList.add('cell'); 
