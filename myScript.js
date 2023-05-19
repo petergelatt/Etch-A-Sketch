@@ -2,16 +2,26 @@
 // needs a parameter that will represent the amount of cells that need to be added
 // needs a loop that will continue to add new cells to the grid container until argument number is satisfied
 
-
-
+document.getElementById('sizeSlider').addEventListener('input', setGridSize);
+document.getElementById('clearButton').addEventListener('click', clearGrid);
 
 function setGridSize(){
-    let sizePrompt = prompt("Enter a number 1-64","");
-    let sizeInt = parseInt(sizePrompt);
-    gridNumber = sizeInt;
+    let sizeSlider = document.getElementById('sizeSlider');
+    let gridNumber = parseInt(sizeSlider.value);
     console.log(gridNumber)
     createGrid(gridNumber);
     }
+document.getElementById('clearButton').addEventListener('click', clearGrid);
+
+function clearGrid() {
+
+    let cells = document.querySelectorAll('.cell');
+    
+    cells.forEach(function(cell) {
+        cell.style.backgroundColor = 'white';
+        cell.style.color = 'white';
+    });
+}
 
 function createGrid(gridNumber) {
 

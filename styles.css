@@ -1,12 +1,12 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
   }
 .containerMain {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -22,6 +22,7 @@ body {
     justify-content: center;
     width: 500px;
     height: 500px;
+    margin-bottom: 10px;
   }
   .cell {
     text-align: center;
@@ -30,7 +31,6 @@ body {
     border-collapse: collapse;
 
   }
-
   .cell:hover {
     background-color: red;
     color: yellow;
