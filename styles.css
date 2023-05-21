@@ -20,6 +20,7 @@ body {
     grid-template-rows: repeat(16, 1fr);
     grid-gap: 0px;
     justify-content: center;
+    align-items: center;
     width: 500px;
     height: 500px;
     margin-bottom: 10px;
